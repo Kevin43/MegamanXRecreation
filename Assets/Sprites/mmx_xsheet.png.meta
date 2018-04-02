@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: b504e6032acdf8341bf83abe34ce188d
+labels:
+- Character
 TextureImporter:
   fileIDToRecycleName:
     21300000: mmx_entrance_0
