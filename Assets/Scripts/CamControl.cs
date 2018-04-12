@@ -14,7 +14,7 @@ public class CamControl : MonoBehaviour {
         playerLoc = GameObject.Find("Player").GetComponent<Transform>();
         waitTime += Time.time;
         camPosition = Camera.main.GetComponent<Transform>();
-        Screen.SetResolution(640, 480, false);
+        Screen.SetResolution(800, 600, false);
     }
 	
 	// Update is called once per frame
@@ -25,7 +25,7 @@ public class CamControl : MonoBehaviour {
 
         try
         {
-            if (playerLoc.transform.position.x >= 5.5f)
+            if (playerLoc.transform.position.x >= 0.7f)
             {
                 camPosition.position = new Vector3(playerLoc.position.x, camPosition.position.y, camPosition.position.z);
             }
