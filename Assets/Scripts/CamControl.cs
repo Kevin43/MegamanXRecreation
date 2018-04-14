@@ -25,7 +25,7 @@ public class CamControl : MonoBehaviour {
 
         try
         {
-            if (playerLoc.transform.position.x >= 0.7f)
+            if (playerLoc.transform.position.x >= 2.3f)
             {
                 camPosition.position = new Vector3(playerLoc.position.x, camPosition.position.y, camPosition.position.z);
             }
