@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour {
         if (move < 0) GetComponent<Rigidbody2D>().velocity = new Vector3(move * playerSpeed, GetComponent<Rigidbody2D>().velocity.y);
         if (move > 0) GetComponent<Rigidbody2D>().velocity = new Vector3(move * playerSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
-        grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+        //grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
         if (grounded && (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
         {
             //schedulePlay(sound.mm_jump);
@@ -53,6 +53,10 @@ public class PlayerMovement : MonoBehaviour {
         {
             Flip();
         }
+    }
+    void Update ()
+    {
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
     }
 
     void Flip()
