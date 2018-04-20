@@ -5,7 +5,7 @@ using UnityEngine;
 public class CamControl : MonoBehaviour {
 
     private Transform playerLoc;
-    private float waitTime = 1.5f;
+    private float waitTime = 0f;
     private Transform camPosition;
 
 
@@ -25,7 +25,7 @@ public class CamControl : MonoBehaviour {
 
         try
         {
-            if (playerLoc.transform.position.x >= 2.3f)
+            if (playerLoc.transform.position.x >= 0f)
             {
                 camPosition.position = new Vector3(playerLoc.position.x, camPosition.position.y, camPosition.position.z);
             }
